@@ -10,3 +10,28 @@ window.addEventListener('scroll', function(){
     nav.classList.remove('nav-dark')
   }
 })
+
+
+// transition effect
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.transition-item');
+
+  function checkInView() {
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop < windowHeight) {
+        section.classList.add('show');
+      } else {
+        section.classList.remove('show');
+      }
+    });
+  }
+
+  // Initial check
+  checkInView();
+
+  // Listen to scroll event
+  document.addEventListener('scroll', checkInView);
+});

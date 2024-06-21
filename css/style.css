@@ -78,7 +78,9 @@ section h1 {
   font-size: 1.1rem;
 }
 
+
 .sosial-icon svg {
+ 
   margin-right: .7em;
   margin-bottom: 10px;
   cursor: pointer;
@@ -173,6 +175,26 @@ hr {
   padding: 10px;
 }
 
+/* animasi img */
+.zoom {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.transition-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.transition-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* portfolio*/
 #portfolio {

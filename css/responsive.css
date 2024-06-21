@@ -56,10 +56,16 @@
  h1 {
   font-size: 2rem !important;
  }
+
+ #portfolio .col-md-12 {
+  flex-direction: column !important;
+}
 }
 
 /* for smartphone */
 @media screen and ( max-width : 350px ) {
+
+
 
   #portfolio .col-md-12 {
     flex-direction: column !important;
